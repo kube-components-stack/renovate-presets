@@ -1,7 +1,7 @@
 {
   "regexManagers": [
     {
-      "fileMatch": ["\\.yaml$"],
+      "fileMatch": ["^.*/helm-generator\\.yaml$"],
       "matchStrings": [
         "name:\\s+(?:&\\S+\\s+)?(?<depName>\\S+)\\nversion:\\s+(?<currentValue>\\S+)\\nrepo:\\s+(?<registryUrl>\\S+)"
       ],
