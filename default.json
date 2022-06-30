@@ -4,9 +4,9 @@
       "fileMatch": ["^.*/helm-generator\\.yaml$"],
       "matchStringsStrategy": "combination",
       "matchStrings": [
-        "^name:\\s+(?:&\\S+\\s+)?(?<depName>\\S+)",
-        "\\nversion:\\s+(?<currentValue>\\S+)",
-        "\\nrepo:\\s+(?<registryUrl>\\S+)"
+        "(^|\\n)name:\\s+(?:&\\S+\\s+)?(?<depName>\\S+)",
+        "(^|\\n)version:\\s+(?<currentValue>\\S+)",
+        "(^|\\n)repo:\\s+(?<registryUrl>\\S+)"
       ],
       "datasourceTemplate": "helm"
     }
