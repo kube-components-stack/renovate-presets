@@ -1,0 +1,13 @@
+{
+  "regexManagers": [
+    {
+      "fileMatch": ["^helm-generator\\.yaml$"],
+      "matchStrings": [
+        "repo: (?<registryUrls>.*?)\\n",
+        "name: (?<depName>.*?)\\n",
+        "version: (?<currentValue>.*?)\\n"
+      ],
+      "datasourceTemplate": "helm"
+    }
+  ]
+}
