@@ -3,7 +3,7 @@
     {
       "fileMatch": ["\\.yaml$"],
       "matchStrings": [
-        "name:\\s+(?<depName>\\S+)\\nversion:\\s+(?<currentValue>\\S+)\\nrepo:\\s+(?<registryUrl>\\S+)"
+        "name:\\s+(?:&\\S+\\s+)?(?<depName>\\S+)\\nversion:\\s+(?<currentValue>\\S+)\\nrepo:\\s+(?<registryUrl>\\S+)"
       ],
       "datasourceTemplate": "helm"
     }
