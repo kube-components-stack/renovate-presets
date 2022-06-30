@@ -2,6 +2,7 @@
   "regexManagers": [
     {
       "fileMatch": ["^.*/helm-generator\\.yaml$"],
+      "matchStringsStrategy": "combination",
       "matchStrings": [
         "^name:\\s+(?:&\\S+\\s+)?(?<depName>\\S+)",
         "^version:\\s+(?<currentValue>\\S+)",
