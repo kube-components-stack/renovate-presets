@@ -10,6 +10,10 @@
     {
       "packageNames": ["prometheus-community/helm-charts"],
       "versioning": "regex:(kube-prometheus-stack-)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?"
+    },
+    {
+      "packageNames": ["argoproj/argo-helm"],
+      "versioning": "regex:(argo-cd-)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?"
     }
   ],
   "regexManagers": [
@@ -24,7 +28,10 @@
       "datasourceTemplate": "helm"
     },
     {
-      "fileMatch": ["^crds/kube-prometheus-stack/base/kustomization\\.yaml$"],
+      "fileMatch": [
+        "^crds/kube-prometheus-stack/base/kustomization\\.yaml$",
+        "^crds/argo-cd/base/kustomization\\.yaml$"
+      ],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "raw\\.githubusercontent\\.com\\/(?<depName>[^\\/]+\\/[^\\/]+)\\/(?<currentValue>[^\\/]+)"
