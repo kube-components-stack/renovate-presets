@@ -3,9 +3,10 @@
     {
       "datasources": [
         "helm",
-        "github-releases"
+        "github-releases",
+        "github-tags"
       ],
-      "matchUpdateTypes": ["minor", "patch", "major"]
+      "matchUpdateTypes": ["minor", "patch"]
     }
   ],
   "regexManagers": [
