@@ -23,7 +23,7 @@
       "fileMatch": ["^crds/kube-prometheus-stack/base/kustomization\\.yaml$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "raw\\.githubusercontent\\.com\\/(?<depName>[^\\/]+\\/[^\\/]+)\\/(?<currentValue>[^\\/]+-(?<versioning>[^\\/]+))"
+        "raw\\.githubusercontent\\.com\\/(?<depName>[^\\/]+\\/[^\\/]+)\\/(?<packageName>[^\\/]+)-(?<currentValue>[^\\/]+)"
       ],
       "datasourceTemplate": "github-releases"
     }
