@@ -1,14 +1,4 @@
 {
-  "packageRules": [
-    {
-      "datasources": [
-        "helm",
-        "github-releases",
-        "github-tags"
-      ],
-      "matchUpdateTypes": ["minor", "patch"]
-    }
-  ],
   "regexManagers": [
     {
       "fileMatch": ["^.*/helm-generator\\.yaml$"],
@@ -21,11 +11,7 @@
       "datasourceTemplate": "helm"
     },
     {
-      "fileMatch": [
-        "^crds/kube-prometheus-stack/base/kustomization\\.yaml$",
-        "^crds/argo-cd/base/kustomization\\.yaml$"
-      ],
-      "matchStringsStrategy": "any",
+      "fileMatch": ["^crds/[^\\/]+/base/kustomization\\.yaml$"],
       "matchStrings": [
         "raw\\.githubusercontent\\.com\\/(?<depName>[^\\/]+\\/[^\\/]+)\\/(?<currentValue>[^\\/]+)"
       ],
