@@ -6,6 +6,10 @@
         "github-releases"
       ],
       "matchUpdateTypes": ["minor", "patch", "major"]
+    },
+    {
+      "packageNames": ["prometheus-community/helm-charts"],
+      "versioning": "regex:(kube-prometheus-stack-)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?"
     }
   ],
   "regexManagers": [
@@ -23,9 +27,9 @@
       "fileMatch": ["^crds/kube-prometheus-stack/base/kustomization\\.yaml$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "raw\\.githubusercontent\\.com\\/(?<depName>[^\\/]+\\/[^\\/]+)\\/(?<packageName>[^\\/]+)-(?<currentValue>[^\\/]+)"
+        "raw\\.githubusercontent\\.com\\/(?<depName>[^\\/]+\\/[^\\/]+)\\/(?<currentValue>[^\\/]+)"
       ],
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-tags"
     }
   ]
 }
