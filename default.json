@@ -1,7 +1,7 @@
 {
   "regexManagers": [
     {
-      "fileMatch": ["^.*/helm-generator\\.yaml$"],
+      "fileMatch": ["^cluster-addons/[^\\/]+/base/helm-generator\\.yaml$"],
       "matchStringsStrategy": "combination",
       "matchStrings": [
         "(^|\\n)name:\\s+(?:&\\S+\\s+)?(?<depName>\\S+)",
