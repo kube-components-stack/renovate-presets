@@ -6,13 +6,6 @@
         "github-releases"
       ],
       "matchUpdateTypes": ["minor", "patch", "major"]
-    },
-    {
-      "packageNames": [
-        "prometheus-community/helm-charts",
-        "argoproj/argo-helm"
-      ],
-      "versioning": "regex:(.*[^\\d])?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?"
     }
   ],
   "regexManagers": [
@@ -35,7 +28,8 @@
       "matchStrings": [
         "raw\\.githubusercontent\\.com\\/(?<depName>[^\\/]+\\/[^\\/]+)\\/(?<currentValue>[^\\/]+)"
       ],
-      "datasourceTemplate": "github-tags"
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "regex:(.*[^\\d])?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?"
     }
   ]
 }
