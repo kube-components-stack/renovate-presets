@@ -8,12 +8,11 @@
       "matchUpdateTypes": ["minor", "patch", "major"]
     },
     {
-      "packageNames": ["prometheus-community/helm-charts"],
+      "packageNames": [
+        "prometheus-community/helm-charts",
+        "argoproj/argo-helm"
+      ],
       "versioning": "regex:(.*[^\\d])?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?"
-    },
-    {
-      "packageNames": ["argoproj/argo-helm"],
-      "versioning": "regex:(argo-cd-)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?"
     }
   ],
   "regexManagers": [
