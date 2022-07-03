@@ -18,5 +18,10 @@
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "regex:(.*[^\\d])?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?"
     }
-  ]
+  ],
+  "kubernetes": {
+    "fileMatch": [
+      "^cluster-addons/[^\\/]+/base/job\\.yaml$"
+    ]
+  }
 }
